@@ -1,0 +1,77 @@
+.formas_container {
+  $top: 0;
+  $bottom: 0;
+  
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  
+  img {
+    position: absolute;
+  }
+
+  &__top_left {
+    top: $top;
+    left: 0;
+    width: 40rem;
+  }
+
+  &__top_right {
+    top: $top;
+    right: 0;
+    width: 22rem;
+  }
+
+  &__bottom_left {
+    bottom: $bottom;
+    left: 0;
+    width: 25rem;
+  }
+
+  &__bottom_right {
+    right: 0;
+    bottom: $bottom;
+    width: 42rem;
+  }
+}
+
+.ano_novo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: 94vw;
+  margin: 3rem auto;
+}
+
+.ano_novo__imagem img {
+  width: 670px;
+}
+
+.mensagem {
+  text-align: right;
+  text-transform: capitalize;
+
+  h1 {
+    font-size: 3.6rem;
+    font-weight: $light;
+    color: $navy-blue;
+  }
+
+  h2 {
+    font-size: 5rem;
+    font-weight: $bold;
+    color: $navy-blue;
+  }
+}
+
+.mensagem__poema {
+  margin-top: 2rem;
+
+  p {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    color: $navy-blue;
+  }
+}

@@ -5,9 +5,9 @@ footer {
 .container_lista_social {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   width: 85vw;
   margin: 0 auto;
-  justify-content: flex-end;
 
   .lista_social {
     display: flex;

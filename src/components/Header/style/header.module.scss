@@ -4,8 +4,8 @@ header {
 
 .container_header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 90vw;
   margin: 0 auto;
 
@@ -20,8 +20,8 @@ header {
   gap: 5rem;
 
   li a {
-    color: $navy-blue;
     font-size: 3rem;
     font-weight: $bold;
+    color: $navy-blue;
   }
 }
