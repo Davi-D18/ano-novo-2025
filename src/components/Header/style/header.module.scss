@@ -1,0 +1,27 @@
+header {
+  padding: 1rem 0;
+}
+
+.container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  margin: 0 auto;
+
+  .logo img {
+    width: 90px;
+  }
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+
+  li a {
+    color: $navy-blue;
+    font-size: 3rem;
+    font-weight: $bold;
+  }
+}
