@@ -10,13 +10,27 @@ export function Footer() {
       <section className={S.container_lista_social}>
         <ul className={S.lista_social}>
           <li>
-            <img src={linkedin} alt="Ícone Linkedin" />
+            <a
+              href="https://www.linkedin.com/company/vainaweb/"
+              target="_blank"
+            >
+              <img src={linkedin} alt="Ícone Linkedin" />
+            </a>
           </li>
+
           <li>
-            <img src={instagram} alt="Ícone Instagram" />
+            <a
+              href="https://www.instagram.com/vainaweb?igsh=MWV1MHB3YTY2M3c4Ng=="
+              target="_blank"
+            >
+              <img src={instagram} alt="Ícone Instagram" />
+            </a>
           </li>
+
           <li>
-            <img src={facebook} alt="Ícone Facebook" />
+            <a href="https://www.facebook.com/vainaweb/" target="_blank">
+              <img src={facebook} alt="Ícone Facebook" />
+            </a>
           </li>
         </ul>
       </section>

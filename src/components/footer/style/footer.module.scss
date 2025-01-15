@@ -1,5 +1,6 @@
 footer {
-  margin-top: 3rem;
+  margin-top: 8vh;
+  padding: 1.3rem 0;
 }
 
 .container_lista_social {
@@ -9,13 +10,41 @@ footer {
   width: 85vw;
   margin: 0 auto;
 
+  img {
+    width: 85%;
+  }
+
   .lista_social {
     display: flex;
     list-style: none;
     gap: 3rem;
+    
+    li {
+        transition: transform 0.3s;
+        cursor: pointer;
 
-    li img {
-      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  footer {
+    margin-top: 4vh;
+  }
+  
+  .container_lista_social {
+    justify-content: center;
+    width: 100vw;
+    
+    img {
+      width: 72%;
+    }
+
+    .lista_social {
+      gap: 2rem;
     }
   }
 }
