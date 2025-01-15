@@ -1,38 +1,59 @@
-.formas_container {
-  $top: 0;
-  $bottom: 0;
-  
+@keyframes aparecer-formas-topo {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes aparecer-formas-bottom {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.formas_container {  
   position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  
+  width: 50%;
+  height: 50%;
+
   img {
-    position: absolute;
+    position: fixed;
+    z-index: -1;
   }
 
   &__top_left {
-    top: $top;
+    top: 0;
     left: 0;
     width: 40rem;
+    animation: aparecer-formas-topo 1.8s ease-in-out forwards;
   }
 
   &__top_right {
-    top: $top;
+    top: 0;
     right: 0;
     width: 22rem;
+    animation: aparecer-formas-topo 1.8s ease-in-out forwards;
   }
 
   &__bottom_left {
-    bottom: $bottom;
+    bottom: 0;
     left: 0;
     width: 25rem;
+    animation: aparecer-formas-bottom 1.8s ease-in-out forwards;
   }
 
   &__bottom_right {
     right: 0;
-    bottom: $bottom;
+    bottom: 0;
     width: 42rem;
+    animation: aparecer-formas-bottom 1.8s ease-in-out forwards;
   }
 }
 
@@ -42,11 +63,25 @@
   justify-content: center;
   gap: 4rem;
   width: 94vw;
-  margin: 3rem auto;
+  height: 54dvh;
+  margin: 0 auto;
+  margin-top: 12vh;
 }
 
 .ano_novo__imagem img {
-  width: 670px;
+  width: 590px;
+  animation: glow 1.5s infinite alternate;
+  animation-delay: 2s;
+
+  @keyframes glow {
+    0% {
+      filter: drop-shadow(0 0 2px #f1c40f);
+    }
+
+    100% {
+      filter: drop-shadow(0 0 10px #f1c40f);
+    }
+  }
 }
 
 .mensagem {
@@ -73,5 +108,64 @@
     font-size: 2.5rem;
     line-height: 1.4;
     color: $navy-blue;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .formas_container {
+    &__top_left {
+      width: 18rem;
+    }
+
+    &__top_right {
+      width: 13rem;
+    }
+
+    &__bottom_left {
+      width: 10rem;
+    }
+
+    &__bottom_right {
+      width: 18rem;
+    }
+  }
+  
+  .ano_novo {
+    flex-direction: column;
+    gap: 1.5rem;
+    height: auto;
+    margin-top: 4vh;
+  }
+
+  .ano_novo__imagem {
+    margin: 0 auto;
+
+    img {
+      width: 350px;
+    }
+  }
+
+  .mensagem {
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+  }
+
+  .mensagem__poema {
+    margin-top: 1.5rem;
+
+    p {
+      width: 92%;
+      margin: 0 auto;
+      font-size: 2.1rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
   }
 }

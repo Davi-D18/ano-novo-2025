@@ -1,3 +1,6 @@
+import { Fireworks } from '@fireworks-js/react'
+import { useEffect, useRef, useState } from 'react'
+
 import S from './styles/app.module.scss'
 
 import { Header } from './components/Header/Header'
@@ -11,34 +14,86 @@ import forma3 from '@assets/imgs/forma-3.png'
 import forma4 from '@assets/imgs/forma-4.png'
 
 export function App() {
+  const fireworksContainerRef = useRef()
+
+  const [mostrarFormas, setMostrarFormas] = useState(false)
+
+  const exibirFormas = () => {
+    const timer = setTimeout(() => {
+      setMostrarFormas(true)
+    }, 1400)
+
+    return () => clearTimeout(timer)
+  }
+
+  useEffect(() => {
+    exibirFormas()
+  }, [])
+
+  setTimeout(() => {
+    if (fireworksContainerRef.current) {
+      fireworksContainerRef.current.start()
+    }
+  }, 1500)
+
+  setTimeout(() => {
+    if (fireworksContainerRef.current) {
+      fireworksContainerRef.current.waitStop(true)
+    }
+  }, 13000)
+
   return (
     <>
       <main>
-        <div className={S.formas_container}>
-          <img
-            className={S.formas_container__top_left}
-            src={forma1}
-            alt="forma 1"
-          />
-
-          <img
-            className={S.formas_container__top_right}
-            src={forma2}
-            alt="forma 2"
-          />
-
-          <img
-            className={S.formas_container__bottom_left}
-            src={forma3}
-            alt="forma 3"
-          />
-
-          <img
-            className={S.formas_container__bottom_right}
-            src={forma4}
-            alt="forma 4"
+        <div className={S.fireworks_container}>
+          <Fireworks
+            ref={fireworksContainerRef}
+            options={{
+              autoresize: true,
+              opacity: 0.9,
+              acceleration: 1,
+              particles: 85,
+              explosion: 9,
+              trace: 3,
+              delay: { min: 100, max: 300 }
+            }}
+            style={{
+              width: '100%',
+              height: '100%',
+              position: 'fixed',
+              zIndex: -1,
+              background: 'transparent'
+            }}
           />
         </div>
+
+        {mostrarFormas && (
+          <div className={S.formas_container}>
+            <img
+              className={S.formas_container__top_left}
+              src={forma1}
+              alt="forma 1"
+            />
+
+            <img
+              className={S.formas_container__top_right}
+              src={forma2}
+              alt="forma 2"
+            />
+
+            <img
+              className={S.formas_container__bottom_left}
+              src={forma3}
+              alt="forma 3"
+            />
+
+            <img
+              className={S.formas_container__bottom_right}
+              src={forma4}
+              alt="forma 4"
+            />
+          </div>
+        )}
 
         <Header />
 
@@ -64,9 +119,9 @@ export function App() {
             </div>
           </section>
         </section>
-
-        <Footer />
       </main>
+
+      <Footer />
     </>
   )
 }
