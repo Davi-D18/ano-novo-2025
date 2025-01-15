@@ -1,5 +1,5 @@
 {
-  "name": "b_react-scss",
+  "name": "ano-novo-2025",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,8 +14,11 @@
     "commit": "CZ_CONFIG=./.cz-config.cjs git-cz"
   },
   "dependencies": {
+    "@fireworks-js/react": "^2.10.8",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-confetti": "^6.2.2",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
@@ -36,7 +39,9 @@
     "lint-staged": "^15.2.11",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.4.2",
+    "prop-types": "^15.8.1",
     "puppeteer": "^23.11.1",
+    "react-transition-group": "^4.4.5",
     "sass": "^1.83.0",
     "stylelint": "^16.12.0",
     "stylelint-config-standard-scss": "^14.0.0",
