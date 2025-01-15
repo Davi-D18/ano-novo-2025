@@ -1,0 +1,65 @@
+@keyframes launch {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes text-rise {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(7vh);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}
+
+.new_year_page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  font-family: $font-secondary;
+  text-align: center;
+  overflow: hidden;
+}
+
+.new_year_message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+
+  h1 {
+    margin: 0;
+    font-size: 4rem;
+    animation: text-rise 2.2s ease-out forwards;
+    animation-delay: 2.5s;
+    text-shadow: 0 0 10px #000, 0 0 20px #fd5;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .new_year_message h1 {
+    font-size: 2.8rem;
+  }
+}
