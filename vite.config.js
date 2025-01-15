@@ -7,7 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@c': path.resolve('./src/components'),
-      '@assets': path.resolve('./src/assets')
+      '@assets': path.resolve('./src/assets'),
+      '@styles': path.resolve('./src/styles/')
     }
   },
   css: {

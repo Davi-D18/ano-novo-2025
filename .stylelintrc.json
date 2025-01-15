@@ -2,6 +2,7 @@
   "extends": ["stylelint-config-standard-scss"],
   "plugins": ["stylelint-order"],
   "customSyntax": "postcss-scss",
+  "ignoreFiles": ["**/transition.scss"],
   "rules": {
     "order/order": ["custom-properties", "declarations"],
     "no-duplicate-selectors": true,
