@@ -1,0 +1,25 @@
+.page-wrapper {
+  z-index: 0;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.2s ease-in-out, transform 1s ease-in-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-100%) scale(0.9);
+  transition: opacity 1000ms ease-in, transform 1000ms ease-in;
+}
