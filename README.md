@@ -6,8 +6,6 @@ Este projeto é uma recriação de um layout fornecido no curso Full-Stack do Va
 
 O **Ano Novo 2025** é um projeto desenvolvido como atividade no curso Full-Stack do Vai na Web. O objetivo principal foi recriar um layout fornecido no Figma, utilizando ferramentas modernas do ecossistema front-end. Ele conta com animações representando fogos de artifício e confetes para celebrar a virada do ano.
 
-Você pode conferir o projeto publicado [aqui](https://ano-novo-2025-kappa.vercel.app).
-
 ## 🔧 Ferramentas Utilizadas
 
 O projeto foi construído utilizando as seguintes tecnologias:
@@ -17,6 +15,7 @@ O projeto foi construído utilizando as seguintes tecnologias:
 - **SCSS**: Extensão do CSS que adiciona recursos como variáveis e aninhamento.
 - **@fireworks-js/react**: Biblioteca para criação de animações de fogos de artifício.
 - **react-confetti**: Biblioteca para renderizar confetes na tela.
+- **react-transition-group**: Biblioteca para gerenciar transi es entre componentes React.
 
 ## 🚀 Executando o Projeto
 
